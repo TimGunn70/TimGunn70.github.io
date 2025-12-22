@@ -499,3 +499,5 @@ if (typeof document !== "undefined") {
 return VanillaTilt;
 
 }());
+
+export default VanillaTilt;

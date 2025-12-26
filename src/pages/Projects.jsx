@@ -3,26 +3,40 @@ import ProjectCard from '../components/projects/ProjectCard';
 function Projects() {
   const projectsData = [
     {
-      id: 1,
-      title: "Project 1: Movie Sentiment Analyzer",
-      description: "Built an end-to-end text classification pipeline to predict sentiment in movie reviews using Scikit-learn and PyTorch. Explored feature engineering techniques such as TF-IDF and implemented neural networks for improved accuracy. Gained experience in natural language processing, model evaluation, and handling unstructured text data in Python.",
-      image: "/3-tips-sentiment-analysis.jpg",
-      alternate: false
-    },
-    {
-      id: 2,
-      title: "Project 2: Weather Predictor",
-      description: "Built a multilayer perceptron (MLP) from scratch using NumPy, Pandas, and SciPy to predict weather conditions from time-series data. Implemented forward and backward propagation manually, exploring GeLU activations, L2 regularization, and residual connections to improve generalization. Strengthened understanding of neural network fundamentals, numerical optimization, and time-series data handling in Python.",
-      image: "/Weather-Icons.png",
-      alternate: true
-    },
-    {
-      id: 3,
-      title: "Project 3: Hidden Markov Model",
-      description: "Developed a two-state Hidden Markov Model (HMM) from scratch to model time-series data with latent structure. Implemented the forward-backward algorithm for inference and the Baum-Welch algorithm for unsupervised learning of transition and emission probabilities. Gained hands-on experience with probabilistic modeling, expectation-maximization, and sequence data analysis. Strengthened understanding of hidden state dynamics and unsupervised learning techniques in Python.",
-      image: "/HMM-Picture.jpg",
-      alternate: false
-    }
+    id: 1,
+    title: "Procter & Gamble Customer Review Analysis",
+    description: "Developed an NLP clustering pipeline using SBERT embeddings, UMAP, and HDBSCAN with custom cluster labeling to analyze 60,000+ customer reviews. Extracted actionable insights on sentiment and product feedback, demonstrating the ability to process large-scale text data, perform dimensionality reduction, and communicate results for business decision-making.",
+    image: "/P&G.jpg",
+    alternate: false
+  },
+  {
+    id: 2,
+    title: "Sticky Hidden Markov Model for Financial Regime Detection",
+    description: "Implemented a custom Sticky Hidden Markov Model from scratch using log-space Expectation-Maximization and Viterbi decoding to identify market regimes in financial time series. Added sticky transition regularization to reduce regime chatter and validated with log-likelihood and persistence metrics. Strengthened skills in probabilistic modeling and algorithmic sequence analysis.",
+    image: "/HMM-Regime-Results.png",
+    alternate: true
+  },
+  {
+    id: 3,
+    title: "Impact of In-Context Learning on Small LLM Reasoning",
+    description: "Independently designed and executed a study analyzing how in-context learning (ICL) affects mathematical reasoning in small language models. Built evaluation pipelines comparing zero-shot and few-shot prompting, analyzed performance trends, and communicated findings through a poster and report. Strengthened skills in experimental design, evaluation, and interpreting LLM behavior.",
+    image: "ICL-Results.png",
+    alternate: false
+  },
+  {
+    id: 4,
+    title: "Weather Predictor",
+    description: "Built a multilayer perceptron (MLP) from scratch using NumPy, Pandas, and SciPy to forecast weather conditions from historical time-series data. Implemented forward/backward propagation manually, using GeLU activations, residual connections, and L2 regularization to improve generalization. Strengthened understanding of neural network fundamentals and time-series modeling.",
+    image: "/Weather-Icons.png",
+    alternate: true
+  },
+  {
+    id: 5,
+    title: "Movie Sentiment Analyzer",
+    description: "Built an end-to-end text classification pipeline to predict sentiment in movie reviews using Scikit-learn and PyTorch. Engineered features with TF-IDF and word embeddings, and trained neural networks for >85% accuracy. Gained hands-on experience in NLP, model evaluation, and handling unstructured text data.",
+    image: "/3-tips-sentiment-analysis.jpg",
+    alternate: false
+  }
   ];
 
   return (

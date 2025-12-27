@@ -16,6 +16,15 @@ function Navbar() {
   };
 
   const isActive = (path) => {
+    // Special case for games - keep active for all /games/* routes
+    if (path === '/games') {
+      return location.pathname.startsWith('/games');
+    }
+    // For home, only match exact path
+    if (path === '/') {
+      return location.pathname === '/';
+    }
+    // For other routes, match exact path
     return location.pathname === path;
   };
 
@@ -44,6 +53,15 @@ function Navbar() {
             onClick={closeMenu}
           >
             Projects
+          </Link>
+        </li>
+        <li>
+          <Link 
+            to="/games" 
+            className={`tab-link games-tab ${isActive('/games') ? 'active' : ''}`}
+            onClick={closeMenu}
+          >
+            Games
           </Link>
         </li>
         <li>

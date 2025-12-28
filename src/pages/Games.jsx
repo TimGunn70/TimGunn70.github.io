@@ -8,7 +8,7 @@ function Games() {
       description: "Play against a Q-Learning agent trained through 100,000+ games. The agent learned optimal strategies using temporal difference learning and epsilon-greedy exploration.",
       path: "/games/tictactoe",
       difficulty: "Easy",
-      algorithm: "Q-Learning",
+      algorithm: "Trained with Q-Learning",
       status: "Play Now",
       image: "/Tic-Tac-Toe.png"
     },

@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import TicTacToeBoard from '../../components/games/TicTacToeBoard';
+import { loadAgent } from '../../utils/QLearningAgent';
 
 function TicTacToe() {
   const [board, setBoard] = useState(Array(9).fill(null));
@@ -8,6 +9,23 @@ function TicTacToe() {
   const [gameOver, setGameOver] = useState(false);
   const [winner, setWinner] = useState(null);
   const [stats, setStats] = useState({ wins: 0, losses: 0, draws: 0 });
+  const [agent, setAgent] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Load Q-Learning agent on mount
+  useEffect(() => {
+    const initAgent = async () => {
+      const loadedAgent = await loadAgent();
+      if (loadedAgent) {
+        setAgent(loadedAgent);
+        setIsLoading(false);
+      } else {
+        console.error('Failed to load agent, using random AI');
+        setIsLoading(false);
+      }
+    };
+    initAgent();
+  }, []);
 
   const checkWinner = (squares) => {
     const lines = [
@@ -30,7 +48,15 @@ function TicTacToe() {
   };
 
   const makeAIMove = (currentBoard) => {
-    // Simple AI: random available move (we'll replace with Q-learning later)
+    // If agent is loaded, use Q-Learning
+    if (agent) {
+    const move = agent.getMove(currentBoard);
+    return move;
+    }
+
+    console.warn('Agent not loaded! Using random fallback');
+    
+    // Fallback: random move if agent not loaded
     const availableMoves = currentBoard
       .map((val, idx) => val === null ? idx : null)
       .filter(val => val !== null);
@@ -107,7 +133,7 @@ function TicTacToe() {
   };
 
   return (
-    <div className="tab-panel active">
+   <div className="tab-panel active">
       <div className="game-container">
         <Link to="/games" className="back-link">
           ← Back to Games
@@ -115,10 +141,18 @@ function TicTacToe() {
 
         <div className="game-header">
           <h1>Tic-Tac-Toe</h1>
-          <p className="game-subtitle">Play against a Q-Learning Agent</p>
+          <p className="game-subtitle">
+            {isLoading ? 'Loading AI Agent...' : 'Play against a Q-Learning Agent'}
+          </p>
         </div>
 
-        <div className="game-content">
+        {isLoading ? (
+          <div className="loading-container">
+            <div className="loading-spinner"></div>
+            <p>Loading trained Q-Learning agent...</p>
+          </div>
+        ) : (
+          <div className="game-content">
           <div className="game-board-container">
             <TicTacToeBoard 
               board={board}
@@ -129,9 +163,9 @@ function TicTacToe() {
             <div className="game-status">
               {gameOver ? (
                 <div className="status-message">
-                  {winner === 'X' && <span className="win-message">🎉 You Win!</span>}
-                  {winner === 'O' && <span className="loss-message">🤖 AI Wins!</span>}
-                  {winner === 'draw' && <span className="draw-message">🤝 Draw!</span>}
+                  {winner === 'X' && <span className="win-message">You Win!</span>}
+                  {winner === 'O' && <span className="loss-message">AI Wins!</span>}
+                  {winner === 'draw' && <span className="draw-message">Draw!</span>}
                 </div>
               ) : (
                 <div className="status-message">
@@ -183,6 +217,7 @@ function TicTacToe() {
             </div>
           </div>
         </div>
+        )}
       </div>
     </div>
   );

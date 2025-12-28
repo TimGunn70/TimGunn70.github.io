@@ -1,7 +1,7 @@
 import { Stage, Layer, Line, Circle, Group, Rect } from 'react-konva';
 
 function TicTacToeBoard({ board, onCellClick, gameOver }) {
-  const cellSize = 120;
+  const cellSize = 160;
   const boardSize = cellSize * 3;
   const lineWidth = 4;
   const symbolStrokeWidth = 8;

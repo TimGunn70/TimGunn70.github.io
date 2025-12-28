@@ -78,7 +78,7 @@ function WeatherWidget() {
   return (
     <div className="weather-info">
       <a 
-        href="https://weather.com/weather/today/l/Saint+Louis+MO+USMO0787:1:US" 
+        href="https://www.accuweather.com/en/us/st-louis/63102/weather-forecast/349084" 
         target="_blank" 
         rel="noopener noreferrer"
         id="weather-container"

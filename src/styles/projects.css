@@ -1,7 +1,9 @@
 .Projects-List {
     display: flex;
     flex-direction: column;
-    gap: 30px; 
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .Project-Card {
@@ -9,15 +11,24 @@
     font-family: Poppins;
     border-radius: 1rem;
     text-align: center;
-    padding: 80px 80px; 
+    padding: 60px 50px;
     position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: none;
-    background-color: transparent;
-    -webkit-backdrop-filter: none;
-    backdrop-filter: none;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: linear-gradient(
+        to top,
+        rgba(255, 190, 0, 0.15),
+        rgba(255, 234, 0, 0.15)
+    );
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    backdrop-filter: blur(20px) saturate(200%);
     transform-style: preserve-3d;
     transform: perspective(1000px);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.2);
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .Project-Card::before {
@@ -26,14 +37,14 @@
     z-index: -1;
     inset: 0;
     border-radius: inherit;
-    border: 3px solid transparent;
     background: linear-gradient(
         to top,
-        rgba(255, 190, 0, 1),
-        rgba(255, 234, 0, 1)
+        rgba(255, 190, 0, 0.2),
+        rgba(255, 234, 0, 0.2)
     );
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+    opacity: 0.5;
 }
 
 .content-parallax {
@@ -41,6 +52,8 @@
     display: flex;
     justify-content: space-between;
     gap: 60px;
+    position: relative;
+    z-index: 1;
 }
 
 .project-image {

@@ -1,16 +1,45 @@
+.about-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+}
+
+.about-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
 .About-Card {
     font-family: Poppins;
     border-radius: 1rem;
     text-align: center;
-    padding: 60px 60px;
+    padding: 60px 50px;
     position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: none;
-    background-color: transparent;
-    -webkit-backdrop-filter: none;
-    backdrop-filter: none;  
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: linear-gradient(
+        to top,                          
+        rgba(30, 200, 0, 0.15),         
+        rgba(42, 255, 0, 0.15)          
+    );
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    backdrop-filter: blur(20px) saturate(200%);
     transform-style: preserve-3d;
     transform: perspective(1000px);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.2);
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .About-Card::before {
@@ -19,14 +48,19 @@
     z-index: -1;
     inset: 0;
     border-radius: inherit;
-    border: 3px solid transparent;
     background: linear-gradient(
         to top,                          
-        rgba(30, 200, 0, 1),         
-        rgba(42, 255, 0, 1)          
+        rgba(30, 200, 0, 0.2),         
+        rgba(42, 255, 0, 0.2)          
     );
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+    opacity: 0.5;
+}
+
+.About-Card .content-parallax {
+    position: relative;
+    z-index: 1;
 }
 
 .personal-image {

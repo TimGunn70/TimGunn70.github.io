@@ -15,7 +15,7 @@ function Games() {
   ];
 
   return (
-    <div className="tab-panel active">
+    <div className="tab-panel active games-page">
       <div className="games-intro">
         <h2>Play Against RL Agents</h2>
         <p>

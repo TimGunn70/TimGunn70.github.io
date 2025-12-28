@@ -40,7 +40,7 @@ function Projects() {
   ];
 
   return (
-    <div className="tab-panel active">
+    <div className="tab-panel active projects-page">
       <div className="Projects-List">
         {projectsData.map(project => (
           <ProjectCard 

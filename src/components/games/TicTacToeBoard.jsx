@@ -1,10 +1,35 @@
 import { Stage, Layer, Line, Circle, Group, Rect } from 'react-konva';
+import { useState, useEffect, useRef } from 'react';
 
 function TicTacToeBoard({ board, onCellClick, gameOver }) {
-  const cellSize = 160;
-  const boardSize = cellSize * 3;
+  // const cellSize = 160;
+  // const boardSize = cellSize * 3;
   const lineWidth = 4;
   const symbolStrokeWidth = 8;
+
+  const containerRef = useRef(null);
+  const [scale, setScale] = useState(1);
+
+  const baseSize = 480; // This is your cellSize (160) * 3
+  const cellSize = 160;
+  const boardSize = baseSize;
+
+  // Automatically adjust the scale when the window resizes
+  useEffect(() => {
+    const checkSize = () => {
+      if (containerRef.current) {
+        const width = containerRef.current.offsetWidth;
+        // Subtract padding if necessary (e.g., 20px for 10px padding on each side)
+        const padding = 20; 
+        const newScale = (width - padding) / baseSize;
+        setScale(newScale > 1 ? 1 : newScale); // Don't scale up past 1:1
+      }
+    };
+
+    checkSize();
+    window.addEventListener('resize', checkSize);
+    return () => window.removeEventListener('resize', checkSize);
+  }, []);
 
   const getCellPosition = (index) => {
     const row = Math.floor(index / 3);
@@ -57,8 +82,9 @@ function TicTacToeBoard({ board, onCellClick, gameOver }) {
   };
 
   return (
-    <div className="konva-container">
-      <Stage width={boardSize} height={boardSize}>
+    <div className="konva-container" ref={containerRef}>
+      <div className="stage-wrapper">
+      <Stage width={baseSize * scale} height={baseSize * scale} scaleX={scale} scaleY={scale}>
         <Layer>
           {/* Draw grid lines */}
           {/* Vertical lines */}
@@ -115,6 +141,7 @@ function TicTacToeBoard({ board, onCellClick, gameOver }) {
           })}
         </Layer>
       </Stage>
+      </div>
     </div>
   );
 }

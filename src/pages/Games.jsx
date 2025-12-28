@@ -7,7 +7,6 @@ function Games() {
       title: "Tic-Tac-Toe",
       description: "Play against a Q-Learning agent trained through 100,000+ games. The agent learned optimal strategies using temporal difference learning and epsilon-greedy exploration.",
       path: "/games/tictactoe",
-      difficulty: "Easy",
       algorithm: "Trained with Q-Learning",
       status: "Play Now",
       image: "/Tic-Tac-Toe-Game.png"
@@ -31,7 +30,6 @@ function Games() {
             title={game.title}
             description={game.description}
             path={game.path}
-            difficulty={game.difficulty}
             algorithm={game.algorithm}
             status={game.status}
             image={game.image}

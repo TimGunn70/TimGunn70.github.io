@@ -400,7 +400,8 @@
   }
 
   .game-content {
-    gap: 25px;
+    gap: 30px;
+    flex-direction: column; 
   }
 
   .game-board-container {

@@ -57,7 +57,7 @@ body {
 .tab-content:has(.about-page) {
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
-        url('/Underwater-Fish.jpg');
+        url('/Green-Gradient.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -80,7 +80,7 @@ body:has(.projects-page) {
 body:has(.games-page) {
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
-        url('/Arcade-Pattern.jpg');
+        url('/Arcade-Pattern-Enhanced.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -91,7 +91,7 @@ body:has(.games-page) {
 body:has(.about-page) {
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
-        url('/Underwater-Fish.jpg');
+        url('/Green-Gradient.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

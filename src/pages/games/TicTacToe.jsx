@@ -198,23 +198,6 @@ function TicTacToe() {
                 Reset Stats
               </button>
             </div>
-
-            <div className="info-card">
-              <h3>About the AI</h3>
-              <p>
-                This agent was trained using <strong>Q-Learning</strong>, 
-                a reinforcement learning algorithm. It learned optimal 
-                strategies through 100,000+ self-play games.
-              </p>
-              <div className="info-badge">
-                <span className="badge-label">Algorithm:</span>
-                <span className="badge-value">Q-Learning</span>
-              </div>
-              <div className="info-badge">
-                <span className="badge-label">Training Games:</span>
-                <span className="badge-value">100,000+</span>
-              </div>
-            </div>
           </div>
         </div>
         )}

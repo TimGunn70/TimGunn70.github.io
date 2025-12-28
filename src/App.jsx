@@ -5,7 +5,7 @@ import Projects from './pages/Projects';
 import About from './pages/About'
 import Games from './pages/Games';
 import TicTacToe from './pages/games/TicTacToe';
-import './index.css';
+;
 
 function App() {
   return (

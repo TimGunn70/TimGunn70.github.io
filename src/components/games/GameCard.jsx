@@ -9,15 +9,6 @@ function GameCard({ title, description, path, difficulty, algorithm, status, ima
     }
   };
 
-  const getDifficultyColor = (diff) => {
-    switch(diff) {
-      case "Easy": return "#4ade80"; // green
-      case "Medium": return "#fbbf24"; // yellow
-      case "Hard": return "#f87171"; // red
-      default: return "#ffffff";
-    }
-  };
-
   return (
     <div className="Game-Card">
       <div className="game-card-content">
@@ -31,15 +22,6 @@ function GameCard({ title, description, path, difficulty, algorithm, status, ima
           
           <div className="game-badges">
             <span className="badge algorithm-badge">{algorithm}</span>
-            <span 
-              className="badge difficulty-badge" 
-              style={{ backgroundColor: getDifficultyColor(difficulty) }}
-            >
-              {difficulty}
-            </span>
-            <span className={`badge status-badge ${status === "Play Now" ? 'ready' : 'coming-soon'}`}>
-              {status}
-            </span>
           </div>
           
           <p>{description}</p>

@@ -1,0 +1,82 @@
+.Projects-List {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+}
+
+.Project-Card {
+    box-sizing: border-box;
+    font-family: Poppins;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 80px 80px; 
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: none;
+    background-color: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.Project-Card::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border-radius: inherit;
+    border: 3px solid transparent;
+    background: linear-gradient(
+        to top,
+        rgba(255, 190, 0, 1),
+        rgba(255, 234, 0, 1)
+    );
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.content-parallax {
+    transform: translateZ(100px);
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.project-image {
+    width: 40%;
+}
+
+.project-image img {
+    max-width: 100%;
+    max-height: 400px;
+    height: auto;
+    display: block;
+    border-radius: 1rem;
+    object-fit: contain;
+}
+
+.project-details {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-details h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.project-details p {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.alternate-card .content-parallax {
+    flex-direction: row-reverse;
+}
+

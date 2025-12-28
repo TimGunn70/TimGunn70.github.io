@@ -10,7 +10,7 @@ function Games() {
       difficulty: "Easy",
       algorithm: "Trained with Q-Learning",
       status: "Play Now",
-      image: "/Tic-Tac-Toe.png"
+      image: "/Tic-Tac-Toe-Game.png"
     },
   ];
 

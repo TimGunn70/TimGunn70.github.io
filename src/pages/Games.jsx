@@ -5,7 +5,7 @@ function Games() {
     {
       id: 1,
       title: "Tic-Tac-Toe",
-      description: "Play against a Q-Learning agent trained through 100,000+ games. The agent learned optimal strategies using temporal difference learning and epsilon-greedy exploration.",
+      description: "An interactive Tic-Tac-Toe environment featuring a Q-learning agent trained through 100,000+ self-play games, using temporal-difference learning and ε-greedy exploration to learn optimal state-action policies.",
       path: "/games/tictactoe",
       algorithm: "Trained with Q-Learning",
       status: "Play Now",

@@ -37,10 +37,9 @@ function AboutCard() {
         <div className="bio">
           <h3>About me</h3>
           <p>
-            My name is Tim Gunn and I am a student at the University of Notre Dame studying Computer Science. 
-            I'm driven by a deep curiosity and a passion for continuous learning, especially in areas like data science and machine learning.
-            I enjoy breaking down complex problems, uncovering patterns in data, and using analytical thinking to build solutions that make a real-world impact.
-            Outside of tech, I enjoy working out, playing basketball with friends, and watching Cardinals baseball.
+            My name is Tim Gunn, and I am a Computer Science student at Notre Dame interested in machine learning, reinforcement learning, and systems that learn under uncertainty. I enjoy breaking complex problems into experiments to better understand how learning systems behave.
+            Lately, my work has focused on model evaluation, probabilistic methods, and sequence-based learning, with growing interest in agent-based and reinforcement learning approaches.
+            When I’m not coding, you’ll usually find me in the gym, playing basketball with friends, or watching Cardinals baseball.
           </p>
           <h3>Contact</h3>
           <p>

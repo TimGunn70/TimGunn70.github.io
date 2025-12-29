@@ -142,7 +142,7 @@ function TicTacToe() {
         <div className="game-header">
           <h1>Tic-Tac-Toe</h1>
           <p className="game-subtitle">
-            {isLoading ? 'Loading AI Agent...' : 'Play against a Q-Learning Agent'}
+            {isLoading ? 'Loading AI Agent...' : 'Q-Learning Agent'}
           </p>
         </div>
 

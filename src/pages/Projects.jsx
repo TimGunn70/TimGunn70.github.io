@@ -2,25 +2,25 @@ import ProjectCard from '../components/projects/ProjectCard';
 
 function Projects() {
   const projectsData = [
-    {
+  {
     id: 1,
-    title: "Procter & Gamble Customer Review Analysis",
-    description: "Developed an NLP clustering pipeline using SBERT embeddings, UMAP, and HDBSCAN with custom cluster labeling to analyze 60,000+ customer reviews. Extracted actionable insights on sentiment and product feedback, demonstrating the ability to process large-scale text data, perform dimensionality reduction, and communicate results for business decision-making.",
-    image: "/P&G.jpg",
+    title: "Sticky Hidden Markov Model for Financial Regime Detection",
+    description: "Implemented a custom Sticky Hidden Markov Model from scratch using log-space Expectation-Maximization and Viterbi decoding to identify market regimes in financial time series. Added sticky transition regularization to reduce regime chatter and validated with log-likelihood and persistence metrics. Strengthened skills in probabilistic modeling and algorithmic sequence analysis.",
+    image: "/HMM-Regime-Results.png",
     alternate: false
   },
   {
     id: 2,
-    title: "Sticky Hidden Markov Model for Financial Regime Detection",
-    description: "Implemented a custom Sticky Hidden Markov Model from scratch using log-space Expectation-Maximization and Viterbi decoding to identify market regimes in financial time series. Added sticky transition regularization to reduce regime chatter and validated with log-likelihood and persistence metrics. Strengthened skills in probabilistic modeling and algorithmic sequence analysis.",
-    image: "/HMM-Regime-Results.png",
+    title: "Impact of In-Context Learning on Small LLM Reasoning",
+    description: "Independently designed and executed a study on how in-context learning (ICL) affects mathematical reasoning in small language models. Built evaluation pipelines comparing zero-shot and few-shot prompting across difficulty levels, revealing how example selection influences reasoning behavior. Communicated findings through a poster and written report, strengthening skills in experimental design, evaluation, and interpretation of LLM behavior.",
+    image: "ICL-Results.png",
     alternate: true
   },
-  {
+   {
     id: 3,
-    title: "Impact of In-Context Learning on Small LLM Reasoning",
-    description: "Independently designed and executed a study analyzing how in-context learning (ICL) affects mathematical reasoning in small language models. Built evaluation pipelines comparing zero-shot and few-shot prompting, analyzed performance trends, and communicated findings through a poster and report. Strengthened skills in experimental design, evaluation, and interpreting LLM behavior.",
-    image: "ICL-Results.png",
+    title: "Procter & Gamble Customer Review Analysis",
+    description: "Developed an NLP clustering pipeline using SBERT embeddings, UMAP, and HDBSCAN with custom cluster labeling to analyze 60,000+ customer reviews. Extracted actionable insights on sentiment and product feedback, demonstrating the ability to process large-scale text data, evaluate clustering quality, and translate latent patterns into business interpretable insights.",
+    image: "/P&G.jpg",
     alternate: false
   },
   {

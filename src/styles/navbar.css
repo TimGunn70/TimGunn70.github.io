@@ -6,24 +6,6 @@
     background-color: rgb(197, 28, 28);
 }
 
-/* .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background-color: rgb(66, 62, 62);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2) ; 
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    overflow-x: hidden;
-} */
-
 .navbar {
     position: fixed;
     top: 0;
@@ -58,7 +40,7 @@
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    overflow-x: hidden;
+    overflow: visible;
 }
 
 .nav-tabs {

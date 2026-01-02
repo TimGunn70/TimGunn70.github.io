@@ -29,6 +29,11 @@ function Navbar() {
   };
 
   return (
+    <>
+    <div 
+      className={`menu-overlay ${menuOpen ? 'open' : ''}`}
+      onClick={closeMenu}
+    />
     <nav className="navbar">
       <div className="menu-icon" onClick={toggleMenu}>
         <div className="bar"></div>
@@ -77,6 +82,7 @@ function Navbar() {
 
       <SocialLinks />
     </nav>
+    </>
   );
 }
 

@@ -2,7 +2,7 @@ function SocialLinks() {
   return (
     <div className="social-icons">
       <a 
-        href="https://github.com/TimGunn60" 
+        href="https://github.com/TimGunn70" 
         className="social-link" 
         target="_blank" 
         rel="noopener noreferrer"
